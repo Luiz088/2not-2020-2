@@ -29,8 +29,8 @@
       */
 
         let ano = parseInt(prompt('Informe um ano:'))
-        if(isNaN(ano)) {
-            alert('ERRO: o valor informado NÃO É um número inteiro válido!')
+        if(isNaN(ano) || ano < 1582) {
+            alert('ERRO: O ano informado é inválido ou anterior a 1582')
         }
         else if (ano % 400 == 0) {
             alert('O ano é BISSEXTO')
