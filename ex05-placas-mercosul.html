@@ -20,7 +20,7 @@
 
             Dígito         Letra
                0              A
-               1              B
+               1              B)
                2              C
                3              D
                4              E
@@ -37,6 +37,46 @@
             de decisão switch..case, informe ao usuário a letra correspondente
             ao dígito informado.
         */
+        
+        let digito,letra
+        do{
+            digito = parseInt(prompt('Informe o segundo dígito da placa tradicional (0 a 9'))
+        } while(isNaN(digito) || digito < 0 || digito > 9)
+
+        switch(digito) {
+            case 0:
+                letra = 'A'
+                break
+            case 1:
+                letra = 'B'
+                break
+            case 2:
+                letra = 'C'
+                break
+            case 3:
+                letra = 'D'
+                break
+            case 4:
+                letra = 'E'
+                break
+            case 5:
+                letra = 'F'
+                break
+            case 6:
+                letra = 'G'
+                break
+            case 7:
+                letra = 'H'
+                break
+            case 8:
+                letra = 'I'
+                break
+            case 9:
+                letra = 'J'
+
+            // Usando string template por acentos graves (`)
+            alert(`A letra correspondente ao dígito ${digito} é ${letra}.`)
+        }
 
     </script>
 </head>
