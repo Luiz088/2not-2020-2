@@ -4,14 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+</head>
+<body>
+    <h1>Título da página</h1>
+    <p>Isto é um paragrafo</p>
+    <ul>
+        <li>Primeiro item</li>
+        <li id="intruso">Intruso</li>
+        <li>Segundo item</li>
+        <li id="item-x">Terceiro item</li>
+    </ul>
     <script>
+        /*
+            QUANDO JAVASCRIPT É UTILIZADO PARA MANIPULAR HTML,
+            A SEÇÃO <SCRIPT> DEVE SER POSICIONADA NA PARTE FINAL DO ARQUIVO,
+            LOGO ANTES DE </BODY>
+        */
+        
         // 'Use strict' impede que variáveis sejam declaradas
         // sem o uso de let, var ou const
         'use strict'
         
+        //document.querySelector: retorna o primeiro elemento de seu tipo
+        const cabec = document.querySelector('h1')
+        // Alterando o texto interno do elemento
+        cabec.innerHTML = 'Manipulando o Document Object Model (DOM)'
+
+        /* 
+            Alterando o texto do segundoo item
+        */
+       //document.querySelectorALL: captura TODOS os elementos do tipo informado
+       const itens = document.querySelectorAll('li')
+
+        //Em JavaScript, o primiro elemento é o de Índice 0 (ZERO)
+        itens[1].innerHTML = 'Bertoldo'
+
+        //Forma tradicional
+        const itens2 = document.getElementsByTagName('li')
+        itens2[2].innerHTML = 'Jerônimo'
+
+        // Capturando um elemento por id da forma antiga
+        const elemIntruso = document.getElementById('intruso')
+        elemIntruso.innerHTML = 'SOU UM INTRUSO'
+
+        //Capturando um elemento por id da fora nova (ES5+)
+        // Para capturar por id com o querySelector é necessário usar #
+        // antes do id do elemento.
+        const elemX = document.querySelector('#item-x')
+        elemX.style.backgroundColor = 'yellow'
+
     </script>
-</head>
-<body>
-    
 </body>
 </html>
