@@ -139,7 +139,7 @@
 
             return valido
 
-            function montarSaudacao() {
+            function montarsaudacao() {
                 if(validar()){
                     let saudacao = ''
 
@@ -178,7 +178,7 @@
                             break
                         case 5:
                             if(elFeminino.checked) {
-                                saudacao +=  'Senhora '
+                                saudacao += 'Senhora '
                             }
                             else {
                                 saudacao += 'Senhor '
@@ -196,6 +196,7 @@
 
                     saudacao += elPrimeiroNome.value + ' ' + elSobrenome.value
                     saudacao += ', como posso ser útil?'
+                    
 
                     if(elAlert.checked){
                         alert(saudacao)
@@ -208,7 +209,7 @@
 
         }
 
-        elEnviar.addEventListener('click', montarSaudacao)
+        elEnviar.addEventListener('click', montarsaudacao)
 
 
     </script>  
