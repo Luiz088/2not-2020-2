@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 'Use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        'use strict'
+        
+        // kms onde haverá lombofaixa (usando for e exibindo com document.write)
+        for(let i = 1; i <= 400; i = i + 29){
+            document.write( i + '<br>' + ("Haverá lombofaixa no km"))
+        }
+
+        let km = parseInt(prompt('Informe um número de km de 1 a 400'))
+
+        else{
+            switch(km){
+                case 92:
+                case 177:
+                case 291:
+                case 388:
+                    alert("Existe uma megaloja do Magazine Luiza")
+                    break
+
+                case 153:
+                case 356:
+                    alert("Drive-thru dos Calçados Rafarillo")
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
