@@ -210,9 +210,41 @@
 
        document.write('Quadrado de 11 => ' + quadrado2(11) + '<br>')
 
-       //let dobro = y => y * 2
-
+       //Quando temos mais de um parâmetro, os parênteses em volta
+       // dos argumentos, voltam a ser obrigatórios
        let subtract = (a, b) => a - b
+
+       //Quando a função não tem argumentos, os parênteses também
+       // voltam a ser obrigatórios
+       let aleatorio1a60 = () => Math.floor(Math.random() * 60 + 1)
+
+       document.write('Número para a megasena: ' + aleatorio1a60() + '<br>')
+       document.write('Número para a megasena: ' + aleatorio1a60() + '<br>')
+       document.write('Número para a megasena: ' + aleatorio1a60() + '<br>')
+       document.write('Número para a megasena: ' + aleatorio1a60() + '<br>')
+       document.write('Número para a megasena: ' + aleatorio1a60() + '<br>')
+       document.write('Número para a megasena: ' + aleatorio1a60() + '<br>')
+
+       //Quando a minha fução tem mais de uma linha de corpo, voltam
+       // as chaves
+       let eq2grau = (a, b, c) => {
+           let delta = b ** 2 - (4 * a * c)
+           if(delta == 0) {
+               return -b / (2 * a)
+           }
+           else if(delta > 0){
+               let raiz1 = (-b + Math.sqrt(delta)) / 2 * a
+               let raiz2 = (-b - Math.sqrt(delta)) / 2 * a
+               return [raiz1, raiz2]
+           }
+           else { //delta < 0
+                return undefined
+           }
+       }
+
+       document.write(`Eq. 2 grau: a = 1, b = 5, c = 6 =>` + eq2grau(1, 5, 6) + '<br>')
+       document.write(`Eq. 2 grau: a = 1, b = 5, c = 6 =>` + eq2grau(2, 2, 4) + '<br>')
+
     </script>
 </head>
 <body>
